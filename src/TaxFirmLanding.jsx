@@ -37,9 +37,8 @@ const PremiumTaxFirm = () => {
       {/* 네비게이션 */}
       <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen ? 'bg-[#1a1a1a]/95 backdrop-blur-md py-4 shadow-xl' : 'bg-transparent py-6'}`}>
         <div className="container mx-auto px-6 flex justify-between items-center">
-          <div className="text-white font-serif text-2xl tracking-widest font-bold z-50">
-            YOO DONG SU
-            <span className="block text-xs font-sans font-light tracking-[0.3em] text-amber-500 mt-1">TAX & ACCOUNTING</span>
+          <div className="text-white font-serif text-2xl tracking-wide font-bold z-50">
+            유동수 세무회계
           </div>
           
           <div className="hidden md:flex items-center space-x-12">
@@ -61,27 +60,21 @@ const PremiumTaxFirm = () => {
         {/* Hero Section - 사진 배경색과 통일 */}
         <section className="snap-section relative flex items-center bg-[#1a1a1a] text-white overflow-hidden">
           <div className="container mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center min-h-screen">
-            <div className="space-y-8">
-              <p className="text-sm tracking-[0.3em] text-amber-500 font-semibold">
-                YOO DONG SU · TAX & ACCOUNTING
-              </p>
-              <h1 className="font-serif text-4xl md:text-5xl leading-snug text-white">
+            <div className="space-y-6">
+              <h1 className="font-serif text-4xl md:text-5xl leading-[1.4] text-white mb-8">
                 국세청 25년,<br />
                 세무조사·양도·상속·증여 전문
               </h1>
-              <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
+              <p className="text-lg md:text-xl text-slate-300 leading-[1.6]">
                 복잡한 세무는 <span className="font-semibold text-white">유동수 세무회계</span>에 맡기시고,<br />
                 대표님은 사업에만 집중하세요.
               </p>
 
-              <div className="flex flex-col md:flex-row gap-4 pt-4">
+              <div className="pt-6">
                 <button className="px-10 py-4 bg-amber-600 text-white rounded-sm hover:bg-amber-500 transition-all flex items-center justify-center gap-3 shadow-lg group">
-                  <span className="font-medium tracking-wide text-lg">프리미엄 1:1 상담 예약</span>
-                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                </button>
-                <button className="px-10 py-4 border border-slate-500 text-slate-300 rounded-sm hover:border-white hover:text-white transition-all flex items-center justify-center gap-3 hover:bg-white/5">
                   <Shield size={20} />
                   <span className="font-medium tracking-wide text-lg">세무조사 긴급 문의</span>
+                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
             </div>
