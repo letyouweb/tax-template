@@ -7,8 +7,9 @@ const PremiumTaxFirm = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 10);
     };
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -34,22 +35,32 @@ const PremiumTaxFirm = () => {
         }
       `}</style>
 
-      {/* 네비게이션 */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen ? 'bg-[#1a1a1a]/95 backdrop-blur-md py-4 shadow-xl' : 'bg-transparent py-6'}`}>
+      {/* 네비게이션 - 스크롤 시 흰색 배경 전환 */}
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-white shadow-md py-4' 
+          : 'bg-transparent py-6'
+      }`}>
         <div className="container mx-auto px-6 flex justify-between items-center">
-          <div className="text-white font-serif text-2xl tracking-wide font-bold z-50">
+          <div className={`font-serif text-xl md:text-2xl tracking-tight font-bold z-50 transition-colors duration-300 ${
+            isScrolled ? 'text-slate-900' : 'text-white'
+          }`}>
             유동수 세무회계
           </div>
           
-          <div className="hidden md:flex items-center space-x-12">
+          <div className="hidden md:flex items-center space-x-10">
             {['회사소개', '인사이트', '전문분야', '상담문의'].map((item) => (
-              <a key={item} href="#" className="text-sm font-light text-slate-300 hover:text-amber-400 transition-colors tracking-wide">
+              <a key={item} href="#" className={`text-sm font-medium transition-colors tracking-wide ${
+                isScrolled 
+                  ? 'text-slate-700 hover:text-amber-500' 
+                  : 'text-slate-100 hover:text-amber-400'
+              }`}>
                 {item}
               </a>
             ))}
           </div>
 
-          <button className="md:hidden text-white z-50" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <button className={`md:hidden z-50 transition-colors ${isScrolled ? 'text-slate-900' : 'text-white'}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
@@ -70,10 +81,14 @@ const PremiumTaxFirm = () => {
                 대표님은 사업에만 집중하세요.
               </p>
 
-              <div className="pt-6">
-                <button className="px-10 py-4 bg-amber-600 text-white rounded-sm hover:bg-amber-500 transition-all flex items-center justify-center gap-3 shadow-lg group">
+              <div className="pt-6 flex flex-col sm:flex-row gap-4">
+                <button className="px-8 py-4 bg-amber-600 text-white rounded-sm hover:bg-amber-500 transition-all flex items-center justify-center gap-3 shadow-lg group">
                   <Shield size={20} />
                   <span className="font-medium tracking-wide text-lg">세무조사 긴급 문의</span>
+                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                </button>
+                <button className="px-8 py-4 border-2 border-amber-500 text-amber-400 rounded-sm hover:bg-amber-500 hover:text-white transition-all flex items-center justify-center gap-3 group">
+                  <span className="font-medium tracking-wide text-lg">1:1 상담 예약</span>
                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
@@ -88,16 +103,6 @@ const PremiumTaxFirm = () => {
                   className="w-full h-[420px] md:h-[520px] object-cover grayscale"
                 />
               </div>
-            </div>
-          </div>
-
-          {/* 하단 CTA 버튼 */}
-          <div className="absolute bottom-0 w-full border-t border-white/10 bg-[#111111]/90 backdrop-blur-md z-20">
-            <div className="container mx-auto px-6 py-5 flex justify-center">
-              <button className="px-12 py-4 bg-amber-600 text-white font-bold rounded-sm hover:bg-amber-500 transition-all text-lg shadow-xl flex items-center gap-3 group">
-                <span>1:1 상담 예약</span>
-                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-              </button>
             </div>
           </div>
         </section>
