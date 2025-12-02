@@ -71,17 +71,17 @@ const PremiumTaxFirm = () => {
         {/* Hero Section - 사진 배경색과 통일 */}
         <section className="snap-section relative flex items-center bg-[#1a1a1a] text-white overflow-hidden">
           <div className="container mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center min-h-screen">
-            <div className="space-y-6">
-              <h1 className="font-serif text-4xl md:text-5xl leading-[1.4] text-white mb-8">
+            <div>
+              <h1 className="font-serif text-4xl md:text-5xl leading-[1.4] text-white mb-6">
                 국세청 25년,<br />
                 세무조사·양도·상속·증여 전문
               </h1>
-              <p className="text-lg md:text-xl text-slate-300 leading-[1.6]">
+              <p className="text-lg md:text-xl text-slate-300 leading-[1.7] mt-6 mb-10">
                 복잡한 세무는 <span className="font-semibold text-white">유동수 세무회계</span>에 맡기시고,<br />
                 대표님은 사업에만 집중하세요.
               </p>
 
-              <div className="pt-6 flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <button className="px-8 py-4 bg-amber-600 text-white rounded-sm hover:bg-amber-500 transition-all flex items-center justify-center gap-3 shadow-lg group">
                   <Shield size={20} />
                   <span className="font-medium tracking-wide text-lg">세무조사 긴급 문의</span>
@@ -93,9 +93,10 @@ const PremiumTaxFirm = () => {
                 </button>
               </div>
             </div>
+          </div>
 
-            <div className="relative">
-              <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-l from-transparent to-[#1a1a1a] z-10" />
+          <div className="relative">
+            <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-l from-transparent to-[#1a1a1a] z-10" />
               <div className="relative rounded-xl overflow-hidden shadow-2xl">
                 <img
                   src="/images/Main.jpg"
