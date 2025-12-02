@@ -34,8 +34,8 @@ const PremiumTaxFirm = () => {
         }
       `}</style>
 
-      {/* 네비게이션 - [전화 상담] 버튼 삭제 */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen ? 'bg-[#0c1222]/95 backdrop-blur-md py-4 shadow-xl' : 'bg-transparent py-6'}`}>
+      {/* 네비게이션 */}
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen ? 'bg-[#1a1a1a]/95 backdrop-blur-md py-4 shadow-xl' : 'bg-transparent py-6'}`}>
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="text-white font-serif text-2xl tracking-widest font-bold z-50">
             YOO DONG SU
@@ -58,8 +58,8 @@ const PremiumTaxFirm = () => {
 
       <main className="snap-container bg-slate-50">
         
-        {/* Hero Section - 색상 통일, 노란색 하이라이트 제거, 하단 버튼으로 변경 */}
-        <section className="snap-section relative flex items-center bg-[#0c1222] text-white overflow-hidden">
+        {/* Hero Section - 사진 배경색과 통일 */}
+        <section className="snap-section relative flex items-center bg-[#1a1a1a] text-white overflow-hidden">
           <div className="container mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center min-h-screen">
             <div className="space-y-8">
               <p className="text-sm tracking-[0.3em] text-amber-500 font-semibold">
@@ -87,7 +87,7 @@ const PremiumTaxFirm = () => {
             </div>
 
             <div className="relative">
-              <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-l from-transparent to-[#0c1222] z-10" />
+              <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-l from-transparent to-[#1a1a1a] z-10" />
               <div className="relative rounded-xl overflow-hidden shadow-2xl">
                 <img
                   src="/images/Main.jpg"
@@ -98,8 +98,8 @@ const PremiumTaxFirm = () => {
             </div>
           </div>
 
-          {/* 하단: 성과바 삭제 → CTA 버튼 */}
-          <div className="absolute bottom-0 w-full border-t border-white/10 bg-[#080d18]/90 backdrop-blur-md z-20">
+          {/* 하단 CTA 버튼 */}
+          <div className="absolute bottom-0 w-full border-t border-white/10 bg-[#111111]/90 backdrop-blur-md z-20">
             <div className="container mx-auto px-6 py-5 flex justify-center">
               <button className="px-12 py-4 bg-amber-600 text-white font-bold rounded-sm hover:bg-amber-500 transition-all text-lg shadow-xl flex items-center gap-3 group">
                 <span>1:1 상담 예약</span>
@@ -142,7 +142,7 @@ const PremiumTaxFirm = () => {
         </section>
 
         {/* Services Section */}
-        <section className="snap-section flex items-center bg-[#0c1222] text-white">
+        <section className="snap-section flex items-center bg-[#1a1a1a] text-white">
           <div className="container mx-auto px-6 py-20">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-serif font-bold text-white mb-4">대표 세무 서비스</h2>
@@ -261,10 +261,10 @@ const PremiumTaxFirm = () => {
           </div>
         </section>
 
-        {/* CTA Section - 세련된 디자인 */}
-        <section className="snap-section flex items-center justify-center bg-[#0c1222] text-center relative overflow-hidden">
+        {/* CTA Section */}
+        <section className="snap-section flex items-center justify-center bg-[#1a1a1a] text-center relative overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-[#0c1222] to-slate-950"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] via-[#252525] to-[#1a1a1a]"></div>
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-600/5 rounded-full blur-3xl"></div>
           </div>
